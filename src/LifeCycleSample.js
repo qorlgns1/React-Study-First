@@ -1,4 +1,3 @@
-import { thistle } from 'color-name';
 import React, { Component } from 'react';
 
 class LifeCycleSample extends Component {
@@ -20,8 +19,8 @@ class LifeCycleSample extends Component {
       return {
         color: nextProps.color,
       };
-      return null;
     }
+    return null;
   }
 
   componentDidMount() {
@@ -68,6 +67,7 @@ class LifeCycleSample extends Component {
 
     return (
       <div>
+        {this.props.missing.value}
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>
